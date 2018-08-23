@@ -1,0 +1,30 @@
+{
+  "name": "dueto",
+  "version": "0.1.0",
+  "description": "The simplest way to keep tasks.",
+  "private": true,
+  "main": "src/App.js",
+  "scripts": {
+    "test": "eslint --config .eslint.json **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agzeri/dueto.git"
+  },
+  "keywords": [
+    "Tasks",
+    "React",
+    "ToDo",
+    "JavaScript",
+    "App"
+  ],
+  "author": "Mr R <@agzeri>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agzeri/dueto/issues"
+  },
+  "homepage": "https://github.com/agzeri/dueto#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0"
+  }
+}
