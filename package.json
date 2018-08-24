@@ -5,6 +5,7 @@
   "private": true,
   "main": "src/App.js",
   "scripts": {
+    "precommit": "npm t",
     "test": "eslint --config .eslint.json **/*.js"
   },
   "repository": {
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/agzeri/dueto#readme",
   "devDependencies": {
-    "eslint": "^5.4.0"
+    "eslint": "^5.4.0",
+    "husky": "^0.14.3"
   }
 }
