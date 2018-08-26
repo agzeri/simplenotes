@@ -6,7 +6,8 @@
   "main": "src/App.js",
   "scripts": {
     "precommit": "npm t",
-    "test": "eslint --config .eslint.json **/*.js"
+    "start": "webpack --mode development",
+    "test": "eslint --config .eslint.json src/**/*.js"
   },
   "repository": {
     "type": "git",
