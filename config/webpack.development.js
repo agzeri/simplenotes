@@ -1,3 +1,8 @@
+/**
+ * Webpack `development` configuration file.
+ *
+ *     `devServer`: Importing `webpack-dev-server` functionality.
+ */
 import merge from 'webpack-merge';
 
 import parts from './webpack.parts';
