@@ -1,6 +1,7 @@
 {
   "extends": "eslint:recommended",
   "parserOptions": {
+    "ecmaVersion": 6,
     "sourceType": "module"
   },
   "rules": {
@@ -20,5 +21,8 @@
       2,
       "always"
     ]
+  },
+  "globals": {
+    "process": true
   }
 }
