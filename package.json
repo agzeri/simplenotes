@@ -7,7 +7,7 @@
   "scripts": {
     "precommit": "npm t",
     "start": "webpack --mode development",
-    "test": "eslint --config .eslint.json src/**/*.js"
+    "test": "eslint --config .eslint.json src/"
   },
   "repository": {
     "type": "git",
