@@ -6,7 +6,8 @@
   "main": "src/App.js",
   "scripts": {
     "precommit": "npm t",
-    "start": "webpack --mode development --devtool false",
+    "build": "webpack --mode development --devtool false",
+    "start": "webpack-dev-server --mode development",
     "test": "eslint --config .eslint.json src/"
   },
   "repository": {
@@ -31,6 +32,7 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.4.0",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "webpack-dev-server": "^3.1.6"
   }
 }
