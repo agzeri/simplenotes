@@ -20,6 +20,19 @@ const parts = {
       overlay: true,        /* [5] */
     },
   }),
+  loadCSS: ({ include, exclude } = {}) => ({
+    module: {
+      rules: [{
+        test: /\.css$/,
+        include,
+        exclude,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }]
+    }
+  })
 };
 
 export default parts;
