@@ -9,13 +9,16 @@ export default {
    *     Parse HOST and PORT from `env` to allow customization.
    *     [2] Defaults to `localhost`.
    *     [3] Defaults to `8080`.
+   *
    *     [4] Open the page in browser.
+   *     [5] Enabling error overlay.
    */
   devServer: {
     stats: 'errors-only', /* [1] */
     host: process.env.HOST, /* [2] */
     port: process.env.PORT, /* [3] */
     open: true, /* [4] */
+    overlay: true, /* [5] */
   },
   plugins: [
     new template({
