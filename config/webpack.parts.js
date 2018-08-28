@@ -30,7 +30,21 @@ const parts = {
         exclude,
         use: [
           'style-loader',
-          'css-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: `${ __dirname }/postcss.config.js`,
+              },
+            },
+          },
         ],
       }],
     },
