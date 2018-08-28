@@ -1,14 +1,14 @@
 import merge from 'webpack-merge';
 
-import parts from './webpack.parts';
+import extractCSS from './parts/extractCSS';
 
 const production = merge([
-  parts.extractCSS({
+  extractCSS({
     use: ['css-loader', {
       loader: 'postcss-loader',
       options: {
         config: {
-          path: `${ __dirname }/postcss.config.js`
+          path: `${ __dirname }/parts/postcss.config.js`
         }
       }
     }],

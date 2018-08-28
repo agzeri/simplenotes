@@ -5,14 +5,15 @@
  */
 import merge from 'webpack-merge';
 
-import parts from './webpack.parts';
+import devServer from './parts/devServer';
+import loadCSS from './parts/loadCSS';
 
 const development = merge([
-  parts.devServer({
+  devServer({
     host: process.env.HOST,
     port: process.env.PORT,
   }),
-  parts.loadCSS(),
+  loadCSS(),
 ]);
 
 export default development;
