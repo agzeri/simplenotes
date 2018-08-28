@@ -7,8 +7,6 @@
 import merge from 'webpack-merge';
 import template from 'html-webpack-plugin';
 
-import parts from './webpack.parts';
-
 const common = merge([
   {
     plugins: [
@@ -17,7 +15,6 @@ const common = merge([
       }),
     ],
   },
-  parts.loadCSS(),
 ]);
 
 export default common;

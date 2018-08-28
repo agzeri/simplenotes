@@ -12,6 +12,7 @@ const development = merge([
     host: process.env.HOST,
     port: process.env.PORT,
   }),
+  parts.loadCSS(),
 ]);
 
 export default development;

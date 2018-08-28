@@ -1,3 +1,5 @@
+import extract from 'mini-css-extract-plugin';
+
 const parts = {
   /**
    * `webpack-dev-server` functionality customized through `devServer` field.
@@ -29,10 +31,29 @@ const parts = {
         use: [
           'style-loader',
           'css-loader'
-        ]
-      }]
-    }
-  })
+        ],
+      }],
+    },
+  }),
+  extractCSS: ({ include, exclude, use = [] }) => {
+    const plugin = new extract({
+      filename: '[name].css',
+    });
+
+    return {
+      module: {
+        rules: [{
+          test: /\.css$/,
+          include,
+          exclude,
+          use: [
+            extract.loader
+          ].concat(use),
+        }],
+      },
+      plugins: [plugin],
+    };
+  },
 };
 
 export default parts;
