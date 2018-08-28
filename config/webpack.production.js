@@ -1,6 +1,12 @@
 import merge from 'webpack-merge';
+import glob from 'glob';
 
 import extractCSS from './parts/extractCSS';
+import purifyCSS from './parts/purifyCSS';
+
+const PATHS = {
+  app: `${ __dirname }/src`,
+};
 
 const production = merge([
   extractCSS({
@@ -12,6 +18,9 @@ const production = merge([
         }
       }
     }],
+  }),
+  purifyCSS({
+    paths: glob.sync(`${ PATHS.app }/**/**.js`, { nodir: true }),
   }),
 ]);
 
