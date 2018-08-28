@@ -1,5 +1,6 @@
 import App from './components/App';
 
+import 'normalize.css';
 import './main.css';
 
 /* eslint-disable no-undef */
